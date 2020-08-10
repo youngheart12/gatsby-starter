@@ -1,5 +1,5 @@
 ---
-path: /bogs
+path: /blog
 date: 2020-08-10T01:55:00.370Z
 title: My new framework
 ---
