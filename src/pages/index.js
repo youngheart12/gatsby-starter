@@ -1,8 +1,9 @@
 import React from "react"
-import Button from '@material-ui/core/Button'
+import Layout from './component/Layout';
+import  './index.css';
 export default function Home() {
-  return <div>Its my first step towards this
-    <Button color="primary" variant="contained">Hello world</Button>
-    <Button color="secondary">Work load</Button>
+  return <div className="parent">
+    <Layout></Layout>
   </div>
+  
 }
