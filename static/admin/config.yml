@@ -23,6 +23,7 @@ collections:
     create: true
     fields: 
       - { name: path, label: Path }
+      - { name : title, label: Title}
       - {label: "Job Name",name: "Job", widget: "string"}
       - {label:  "Vaccancy", name: "Vaccancy ", widget: "number" }
       - {label: 'Job Description', name : 'Job Description', widget: 'text'}
