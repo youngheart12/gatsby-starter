@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `blog`,
         enableIdentityWidget: false,
         path: `${__dirname}/blog`,
       },
@@ -20,9 +20,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
+        name: `jobs`,
         enableIdentityWidget: false,
-        path: `${__dirname}/job`,
+        path: `${__dirname}/jobs`,
       },
     },
     `gatsby-transformer-remark`
