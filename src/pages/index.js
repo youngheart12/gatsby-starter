@@ -1,31 +1,9 @@
-import React from "react"
-import {graphql} from 'gatsby';
-export default ({data}) =>{
-  console.log(data)
+import React from 'react'
+
+export default function index() {
   return (
-    <>
-   {data. allMarkdownRemark.edges.map(({node})=>{
-     return <>
-     <h1>{node.frontmatter.title}</h1><a href={node.frontmatter.path}>hello</a>
-     </>
-   })}
-    </>
+    <div>
+      hello
+    </div>
   )
 }
-
-
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            path
-          }
-        }
-      }
-    }
-  }
-`
