@@ -8,7 +8,7 @@ public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: Backend/blog
+    folder: blog
     create: true
     fields:
       
@@ -19,7 +19,7 @@ collections:
 
   - name: Jobs
     label: Jobs
-    folder: Backend/jobs
+    folder: jobs
     create: true
     fields: 
       - { name: path, label: Path }

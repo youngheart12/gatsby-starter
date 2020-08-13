@@ -13,7 +13,16 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/Backend`,
+        enableIdentityWidget: false,
+        path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        enableIdentityWidget: false,
+        path: `${__dirname}/job`,
       },
     },
     `gatsby-transformer-remark`
