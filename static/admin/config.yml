@@ -5,10 +5,10 @@ backend:
 media_library:
   name: cloudinary
   config:
-    cloud_name: dodpjcfkc
+    cloud_name: dilipcloudforcms
     api_key: 368434935873843
 
-    
+
 public_folder: /assets
 
 collections:
