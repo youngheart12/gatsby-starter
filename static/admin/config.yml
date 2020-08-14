@@ -23,6 +23,7 @@ collections:
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
       - { name: identifier, label: Identifier, widget : string, default: "blog"}
+      - {name: 'thumbnail',label: "Featured Image", widget: "image"}
 
   - name: Jobs
     label: Jobs
@@ -30,6 +31,7 @@ collections:
     create: true
     fields: 
       - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
       - {name: 'thumbnail',label: "Featured Image", widget: "image"}
       - { name : title, label: Title}
       - {label: "Job Name",name: "Job", widget: "string"}

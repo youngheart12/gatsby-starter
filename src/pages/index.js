@@ -1,5 +1,6 @@
 import React from "react"
 import {graphql} from 'gatsby';
+import CardTemplate from '../template/cardTemplate';
 export default ({data}) =>{
   console.log(data)
   return (
@@ -9,6 +10,7 @@ export default ({data}) =>{
      <h1>{node.frontmatter.title}</h1><a href={node.frontmatter.path}>hello</a>
      </>
    })}
+   <CardTemplate></CardTemplate>
     </>
   )
 }
