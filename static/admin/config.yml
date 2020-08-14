@@ -24,6 +24,7 @@ collections:
     create: true
     fields: 
       - { name: path, label: Path }
+      - {name: 'thumbnail',label: "Featured Image", widget: "image"}
       - { name : title, label: Title}
       - {label: "Job Name",name: "Job", widget: "string"}
       - {label:  "Vaccancy", name: "Vaccancy ", widget: "number" }
