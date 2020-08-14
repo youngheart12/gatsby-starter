@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid,Typography,Button,Card,CardHeader,CardContent} from '@material-ui/core';
+import {Grid,Typography,Button} from '@material-ui/core';
 export default function Template({
   data,
 }) {
@@ -24,13 +24,18 @@ export default function Template({
     <Grid item>
     <Typography variant="body1" color="textSecondary">{excerpt}</Typography> ...<Button color="secondary">Read more</Button>
     </Grid>
+    <Grid item>
+        <Typography variant="body1" >
+            {frontmatter.Job_Description}
+        </Typography>
+    </Grid>
     </Grid>
     </>
   );
 }
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query JobByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt
@@ -38,6 +43,11 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        Job
+        Job_Description
+        Job_Location
+        Job_Type
+        Vaccancy_
       }
     }
   }

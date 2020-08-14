@@ -4,23 +4,24 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve('src/template/blogTemplate.js');
-
+  const jobTemplate=path.resolve('src/template/jobTemplate.js');
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark {
         edges {
           node {
-            excerpt(pruneLength: 250)
-            html
-            id
             frontmatter {
-              date
               path
               title
+              date
+              Job
+              Job_Description
+              Job_Location
+              Job_Type
+              Vaccancy_
+              identifier
             }
+            excerpt(pruneLength: 1000)
           }
         }
       }
@@ -31,11 +32,19 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      if(node.frontmatter.identifier==="blog"){
       createPage({
         path: node.frontmatter.path,
         component:blogPostTemplate,
         context: {},
       });
+    }else{
+      createPage({
+        path: node.frontmatter.path,
+        component:jobTemplate,
+        context: {},
+      });
+    }
     });
   });
 };
