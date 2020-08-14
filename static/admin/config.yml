@@ -36,7 +36,7 @@ collections:
       - { name : title, label: Title}
       - {label: "Job Name",name: "Job", widget: "string"}
       - {label:  "Vaccancy", name: "Vaccancy ", widget: "number" }
-      - {label: 'Job Description', name : 'Job Description', widget: markdown }
+      -  { name: body, label: Body, widget: markdown }
       - {label: 'Job Location', name: 'Job Location', widget: 'string'}
       - {label: 'Job Type', name: 'Job Type',widget : 'select', options: ["Internship","Full Time"]}
       - { name: identifier, label: Identifier, widget : string, default: "jobs"}

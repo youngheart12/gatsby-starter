@@ -21,7 +21,7 @@ export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{height:"450px"}}>
+    <Card className={classes.root} >
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -37,7 +37,7 @@ export default function MediaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions >
         <Button size="small" color="primary">
           Share
         </Button>
