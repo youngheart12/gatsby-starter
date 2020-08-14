@@ -16,6 +16,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+      - { name: identifier, label: Identifier, widget : string, default: "blog"}
 
   - name: Jobs
     label: Jobs
@@ -29,3 +30,4 @@ collections:
       - {label: 'Job Description', name : 'Job Description', widget: 'text'}
       - {label: 'Job Location', name: 'Job Location', widget: 'string'}
       - {label: 'Job Type', name: 'Job Type',widget : 'select', options: ["Internship","Full Time"]}
+      - { name: identifier, label: Identifier, widget : string, default: "jobs"}
