@@ -1,10 +1,10 @@
 import React from 'react';
-import {Grid,Typography,Button,Card,CardHeader,CardContent} from '@material-ui/core';
+import {Grid,Typography,Button} from '@material-ui/core';
 export default function Template({
   data,
 }) {
   const { markdownRemark } = data;
-  const { frontmatter, html,excerpt } = markdownRemark;
+  const { frontmatter,excerpt } = markdownRemark;
   console.log(excerpt)
   return (
     <>

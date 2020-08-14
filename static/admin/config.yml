@@ -2,7 +2,13 @@ backend:
   name: github
   repo: youngheart12/gatsby-starter
 
-media_folder: static/assets
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dodpjcfkc
+    api_key: 368434935873843
+
+    
 public_folder: /assets
 
 collections:

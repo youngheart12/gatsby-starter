@@ -20,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
               Job_Type
               Vaccancy_
               identifier
+              thumbnail
             }
             excerpt(pruneLength: 1000)
           }
