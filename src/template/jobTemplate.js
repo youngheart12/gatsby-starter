@@ -22,7 +22,7 @@ export default function Template({
       <Typography variant="subtitle2" color="textSecondary" noWrap>by Dilip Kumar</Typography>
     </Grid>
     <Grid item>
-        <img src="https://placeimg.com/640/480/any"></img>
+        {frontmatter.thumbnail && <img src={frontmatter.thumbnail} alt="this is simethig"/>}
     </Grid>
     <Grid item>
     <Typography variant="body1" color="textSecondary">{excerpt}</Typography> ...<Button color="secondary">Read more</Button>

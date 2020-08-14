@@ -33,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log(node,"terminal")
       if(node.frontmatter.identifier==="blog"){
       createPage({
         path: node.frontmatter.path,
