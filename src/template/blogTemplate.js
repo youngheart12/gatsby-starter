@@ -11,18 +11,24 @@ export default function Template({
     <nav style={{background:"dodgerBlue",padding:"10px",color:"white",textAlign:"center"}}>
     <h1>Blogs</h1>
     </nav>
-    <Grid container spacing={2} direction="column"  md={4} style={{margin:"10px 35%"}}>
+    <Grid container spacing={2} direction="column"  md={6} style={{margin:"10px 30%"}}>
       <Grid item>
         <Typography variant="h4" component="h4">{frontmatter.title}</Typography>
       </Grid>
       <Grid item>
-        <Typography variant="body2">Aug 20, 2020</Typography>
+        <Typography variant="body2">{frontmatter.date}</Typography>
       </Grid>
       <Grid item zeroMinWidth md={8}>
       <Typography variant="subtitle2" color="textSecondary" noWrap>by Dilip Kumar</Typography>
     </Grid>
     <Grid item>
-    <Typography variant="body1" color="textSecondary">{excerpt}</Typography> ...<Button color="secondary">Read more</Button>
+        <img src={frontmatter.thumbnail} alt={frontmatter.title}></img>
+    </Grid>
+    <Grid item>
+    <Typography variant="body1" color="textSecondary">{excerpt}</Typography>
+    </Grid>
+    <Grid item>
+      <Typography variant="subtitle2" color="textSecondary">Thankyou for reading</Typography>
     </Grid>
     </Grid>
     </>
@@ -38,6 +44,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        thumbnail
         
       }
     }

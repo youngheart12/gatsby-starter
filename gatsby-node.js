@@ -22,7 +22,7 @@ exports.createPages = ({ actions, graphql }) => {
               identifier
               thumbnail
             }
-            excerpt(pruneLength: 1000)
+            excerpt(pruneLength: 2000)
           }
         }
       }
