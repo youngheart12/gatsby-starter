@@ -6,11 +6,9 @@ export default ({data}) =>{
   return (
     <>
    {data. allMarkdownRemark.edges.map(({node})=>{
-     return <>
-     <h1>{node.frontmatter.title}</h1><a href={node.frontmatter.path}>hello</a>
-     </>
+     return <CardTemplate title={node.frontmatter.title} thumbnail={node.frontmatter.thumbnail} path={node.frontmatter.path} excerpt={node.excerpt} ></CardTemplate>
    })}
-   <CardTemplate></CardTemplate>
+ 
     </>
   )
 }
@@ -25,7 +23,10 @@ export const query = graphql`
           frontmatter {
             title
             path
+            thumbnail 
+           
           }
+          excerpt(pruneLength: 250)
         }
       }
     }
