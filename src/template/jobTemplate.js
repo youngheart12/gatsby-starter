@@ -5,7 +5,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data;
   const { frontmatter,excerpt } = markdownRemark;
-  console.log(data,"job")
+  console.log(frontmatter.thumbnail,"thumb")
   return (
     <>
     <nav style={{background:"dodgerBlue",padding:"10px",color:"white",textAlign:"center"}}>
@@ -22,7 +22,7 @@ export default function Template({
       <Typography variant="subtitle2" color="textSecondary" noWrap>by Dilip Kumar</Typography>
     </Grid>
     <Grid item>
-        <img src="https://placeimg.com/640/480/any"></img>
+        <img src={frontmatter.thumbnail} alt="hello"></img>
     </Grid>
     <Grid item>
     <Typography variant="body1" color="textSecondary">{excerpt}</Typography> ...<Button color="secondary">Read more</Button>
@@ -50,6 +50,7 @@ export const pageQuery = graphql`
         Job_Description
         Job_Location
         Job_Type
+        thumbnail
         Vaccancy_
       }
     }
