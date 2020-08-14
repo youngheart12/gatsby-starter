@@ -15,7 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
               title
               date
               Job
-              Job_Description
+             
               Job_Location
               Job_Type
               Vaccancy_
