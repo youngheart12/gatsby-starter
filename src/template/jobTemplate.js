@@ -5,7 +5,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data;
   const { frontmatter,excerpt } = markdownRemark;
-  console.log(excerpt,frontmatter.thumbnail)
+  console.log(data,"job")
   return (
     <>
     <nav style={{background:"dodgerBlue",padding:"10px",color:"white",textAlign:"center"}}>
@@ -22,7 +22,7 @@ export default function Template({
       <Typography variant="subtitle2" color="textSecondary" noWrap>by Dilip Kumar</Typography>
     </Grid>
     <Grid item>
-        <img src={frontmatter.thumbnail}></img>
+        <img src="https://placeimg.com/640/480/any"></img>
     </Grid>
     <Grid item>
     <Typography variant="body1" color="textSecondary">{excerpt}</Typography> ...<Button color="secondary">Read more</Button>
