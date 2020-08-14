@@ -5,7 +5,7 @@ thumbnail: https://res.cloudinary.com/dilipcloudforcms/image/upload/v1597405834/
 title: Data Scientist
 Job: Data Scientist
 "Vaccancy ": 2
-Job Description: We are looking for a data scientist that will help us discover
+Job Description: We are looking for a  data scientist that will help us discover
   the information hidden in vast amounts of data, and help us make smarter
   decisions to deliver even better products. Your primary focus will be in
   applying data mining techniques, doing statistical analysis, and building high
