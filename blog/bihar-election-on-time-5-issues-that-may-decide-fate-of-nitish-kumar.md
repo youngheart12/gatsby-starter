@@ -1,7 +1,7 @@
 ---
 path: /blog/bihar-election
 date: 2020-08-14T11:38:27.178Z
-title: "Bihar election on time: 5 issues that may decide fate of Nitish Kumar"
+title: 5 issues that may decide fate of Nitish Kumar
 identifier: blog
 thumbnail: https://res.cloudinary.com/dilipcloudforcms/image/upload/c_fit,h_320,w_390/v1597405239/nitish_kj29tc.jpg
 ---
