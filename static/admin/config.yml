@@ -15,9 +15,10 @@ collections:
   - name: blog
     label: Blog
     folder: blog
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
@@ -28,15 +29,17 @@ collections:
   - name: Jobs
     label: Jobs
     folder: jobs
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields: 
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "job-post"}
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - {name: 'thumbnail',label: "Featured Image", widget: "image"}
       - { name : title, label: Title}
       - {label: "Job Name",name: "Job", widget: "string"}
       - {label:  "Vaccancy", name: "Vaccancy ", widget: "number" }
-      -  { name: body, label: Body, widget: markdown }
+      - { name: body, label: Body, widget: markdown }
       - {label: 'Job Location', name: 'Job Location', widget: 'string'}
       - {label: 'Job Type', name: 'Job Type',widget : 'select', options: ["Internship","Full Time"]}
       - { name: identifier, label: Identifier, widget : string, default: "jobs"}
