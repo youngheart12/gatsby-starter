@@ -1,17 +1,48 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Grid } from "@material-ui/core"
-import CardTemplate from "../template/cardTemplate"
-export default ({ data }) => {
+import React from 'react';
+import {Grid} from '@material-ui/core';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import CardTemplate from '../template/cardTemplate';
+import {graphql} from 'gatsby'
+import Typography from '@material-ui/core/Typography';
+import Pagination from '@material-ui/lab/Pagination';
+
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      '& > * + *': {
+        marginTop: theme.spacing(2),
+      },
+    },
+  }),
+);
+
+export default function PaginationControlled({data}) {
+  let total_pages;
+  let itemsPerPage=2;
+  const {allMarkdownRemark}=data;
+  const{edges}=allMarkdownRemark;
+  
+  const classes = useStyles();
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event,value) => {
+    setPage(value);
+  };
+ total_pages=edges.length/2;
+
+ const begin = (page - 1) * itemsPerPage;
+ const end = begin + itemsPerPage;
+ const datatorender=edges.slice(begin,end);
+
   return (
-    <Grid
+    <div className={classes.root}>
+       <Grid
       container
       spacing={2}
       justify="center"
       alignItems="center"
       style={{ margin: "0px 20px" }}
     >
-      {data.allMarkdownRemark.edges.map(({ node }) => {
+      {datatorender.map(({ node }) => {
         return (
           <Grid item md={4}>
             <CardTemplate
@@ -24,23 +55,26 @@ export default ({ data }) => {
         )
       })}
     </Grid>
-  )
+      <Typography>Page: {page}</Typography>
+      <Pagination count={total_pages} page={page} onChange={handleChange} />
+    </div>
+  );
 }
-
 export const query = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            path
-            thumbnail
-          }
-          excerpt(pruneLength: 250)
+query MyQuery {
+  allMarkdownRemark {
+    edges {
+      node {
+        frontmatter {
+          title
+          Job
+          path
+          Job_Type
+          Job_Location
         }
       }
     }
   }
+}
 `
+ 
