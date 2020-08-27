@@ -1,19 +1,21 @@
 ---
 templateKey: blog-post
-path: /blog/fourth-post
+path: /blog/fifth-post
 date: 2020-08-27T02:01:50.409Z
-title: Typescript vs Javascript
+title: "Learn how  to code "
 tags:
   - Typescript
   - Javascript
   - Frontend
+  - Code
+  - C++
 identifier: blog
-thumbnail: https://res.cloudinary.com/dilipcloudforcms/image/upload/v1597393693/sample.jpg
+thumbnail: https://res.cloudinary.com/dilipcloudforcms/image/upload/v1597402434/friendly-ones_m8uswj.png
 ---
 <!--StartFragment-->
 
-Typescript is a modern age Javascript development language. It is a statically compiled language to write clear and simple Javascript code. It can be run on Node js or any browser which supports ECMAScript 3 or newer versions.
+Programming is, quite literally, all around us. From the take-out we order, to the movies we stream, code is ever present in our lives. Whether you are about to start your journey as a web developer, can’t decide which language to learn first, or just want to increase your digital literacy, learning programming fundamentals will be beneficial to your career.
 
-Typescript provides optional static typing, classes, and interface. For a large JavaScript project adopting Typescript can bring you more robust software and easily deployable with a regular JavaScript application.
+In this series of lessons, you’ll explore ideas that are at the heart of learning how to code and start writing your own code!
 
 <!--EndFragment-->
