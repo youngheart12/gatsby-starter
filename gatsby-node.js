@@ -5,7 +5,7 @@ exports.createPages = async({ actions, graphql,reporter }) => {
 
   const blogPostTemplate = path.resolve('src/template/blogTemplate.js');
   const jobTemplate=path.resolve('src/template/jobTemplate.js');
-  const tagTemplate = path.resolve("src/template/tags.js")
+  const tagTemplate = path.resolve("src/template/tag.js")
   const result = await graphql(`
   {
     postsRemark: allMarkdownRemark(
@@ -59,16 +59,20 @@ exports.createPages = async({ actions, graphql,reporter }) => {
   tags = _.uniq(tags)
 
   tags.forEach((tag) => {
-     const tagPath = `/tags/`
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context:{
-        tag
+     const tagPath = `/tags/${_.kebabCase(tag)}/`
+     console.log(tagPath);
+     createPage({
+      path: tagPath,
+      component:tagTemplate,
+      context: {
+        tag:tag,
+        edges:result.edges,
+        myname:"dilip"
       }
     })
+   
   })
-  console.log(tags);
+  
 }
 
   // `).then(result => {

@@ -29,8 +29,8 @@ export default function PaginationControlled({data}) {
   };
  total_pages=edges.length/2;
 
- const begin = (page - 1) * itemsPerPage;
- const end = begin + itemsPerPage;
+ const begin = Math.floor((page - 1) * itemsPerPage);
+ const end = Math.floor(begin + itemsPerPage);
  const datatorender=edges.slice(begin,end);
 
   return (
